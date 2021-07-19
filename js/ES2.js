@@ -24,18 +24,36 @@ var studenti = [
     eta: "18",
   },
 ];
-
-for (let i = 0; i < studenti.length; i++) {
-  var stu = studenti[i];
-  console.log(stu.nome + " " + stu.cognome);
+for (var i = 0; i < studenti.length; i++) {
+  var appoggio = "";
+  for (var proprieta in studenti[i]) {
+  }
+  console.log(studenti[i].nome + " " + studenti[i].cognome);
 }
-var chiediUtente = prompt("inserisci nome");
-studenti.nome = chiediUtente;
-var chiediUtente2 = prompt("inserisci cognome");
-studenti.cognome = chiediUtente2;
-var chiediUtente3 = prompt("inserisci età");
-studenti.età = chiediUtente3;
-console.log(studenti);
-// var base = stu.nome + " " + stu.cognome;
-// var printproprieta = document.getElementById("proprità");
-// printproprieta.innerHTML = base;
+
+var newStudente = {};
+studenti.push(newStudente);
+
+var nomeInput = prompt("inserisci un nome ");
+var cognomeInput = prompt("inserisci un cognome");
+while (isNaN(etaInput)) {
+  var etaInput = parseInt(prompt("inserisci l'età "));
+}
+
+newStudente.nome = nomeInput;
+newStudente.cognome = cognomeInput;
+newStudente.eta = etaInput;
+
+for (var y = 0; y < studenti.length; y++) {
+  console.log(
+    "Il nuovo studente inserito è: " +
+      nomeInput +
+      " " +
+      cognomeInput +
+      " " +
+      "Di anni: " +
+      etaInput
+  );
+}
+var resoconto = nomeInput + cognomeInput + etaInput;
+var print = (document.getElementById("stampa").innerHTML = resoconto);
