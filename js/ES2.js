@@ -26,8 +26,7 @@ var studenti = [
 ];
 for (var i = 0; i < studenti.length; i++) {
   var appoggio = "";
-  for (var proprieta in studenti[i]) {
-  }
+
   console.log(studenti[i].nome + " " + studenti[i].cognome);
 }
 
